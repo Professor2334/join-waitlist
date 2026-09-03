@@ -15,7 +15,7 @@ export default function Header() {
         </div>
 
         {/* Center: Status Pill (Absolutely centered) */}
-        <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2.5 bg-[#06B6D4]/10 border border-[#06B6D4]/30 rounded-full px-6 py-2.5 backdrop-blur-sm">
+        <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2.5 bg-[#06B6D4]/10 border border-[#06B6D4]/30 rounded-full px-4 py-2.5 backdrop-blur-sm">
           <span className="w-2 h-2 rounded-full bg-[#06B6D4]"></span>
           <span className="text-sm text-[#06B6D4] font-medium tracking-wide">Application is now open</span>
         </div>
@@ -23,8 +23,8 @@ export default function Header() {
         {/* Right: INC 2026 Mark */}
         <div className="flex items-center gap-4">
           {/* Circular logo/icon */}
-          <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               {/* Arrow */}
               <path d="M5 15 L9.5 10.5 M9.5 10.5 L6.5 10.5 M9.5 10.5 L9.5 13.5" stroke="#B91C1C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               {/* Left curve ) */}
@@ -35,7 +35,7 @@ export default function Header() {
           </div>
           {/* Text block */}
           <div className="flex flex-col items-start justify-center">
-            <span className="font-bold text-[var(--text-primary)] text-[26px] leading-none mb-1 tracking-tight">INC</span>
+            <span className="font-semibold text-[var(--text-primary)] text-2xl leading-none mb-1 tracking-tight">INC</span>
             <div className="flex items-baseline text-[#388E3C]">
               <span className="text-[0.45rem] font-bold mr-[1px] relative -top-[2px]">TM</span>
               <span className="text-[0.8rem] font-medium leading-none">2026</span>
