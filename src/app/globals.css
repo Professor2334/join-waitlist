@@ -1,26 +1,57 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "../../styles/design-tokens.css";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Colors mapping */
+  --color-page: var(--bg-page);
+  --color-surface: var(--bg-surface);
+  --color-card: var(--bg-card);
+  --color-input: var(--bg-input);
+  --color-footer: var(--bg-footer);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-accent-blue: var(--color-accent-blue);
+  --color-accent-cyan: var(--color-accent-cyan);
+  --color-accent-pink: var(--color-accent-pink);
+
+  --color-success: var(--color-success);
+
+  /* Fonts */
+  --font-sans: var(--font-primary);
+  --font-poppins: var(--font-primary);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  /* Apply smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utility classes based on tokens */
+@layer utilities {
+  .text-gradient-hero {
+    background: var(--gradient-text-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-section {
+    background: var(--gradient-text-section);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-tab-active {
+    box-shadow: var(--glow-tab-active);
+  }
 }

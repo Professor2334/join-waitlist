@@ -1,0 +1,151 @@
+/*
+  styles/design-tokens.css
+  SMART.INC Join Waitlist - Visual Design Tokens
+  Derived strictly from reference image analysis
+*/
+
+:root {
+  /* =========================================
+     Typography (Poppins)
+     ========================================= */
+  --font-primary: 'Poppins', sans-serif;
+  
+  /* Sizes */
+  --text-xs: 0.75rem;      /* 12px - Labels, metadata, pills */
+  --text-sm: 0.875rem;     /* 14px - Small buttons, footer links */
+  --text-base: 1rem;       /* 16px - Body, inputs */
+  --text-lg: 1.125rem;     /* 18px - Card headings */
+  --text-xl: 1.25rem;      /* 20px - Subheadings */
+  --text-2xl: 1.5rem;      /* 24px - Small section headings */
+  --text-3xl: 2rem;        /* 32px */
+  --text-4xl: 2.5rem;      /* 40px - Section headings (Why Join) */
+  --text-6xl: 3.5rem;      /* 56px - Hero headline */
+  --text-7xl: 4rem;        /* 64px - Hero headline (Large) */
+
+  /* Weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.2;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  /* Letter Spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+
+  /* =========================================
+     Colors
+     ========================================= */
+  /* Backgrounds */
+  --bg-page: #07030C;          /* Very dark, deep purple/black */
+  --bg-surface: #100B1A;       /* Form container, elevated layers */
+  --bg-card: #140E20;          /* Feature cards */
+  --bg-input: #1A1425;         /* Form inputs */
+  --bg-footer: #07030C;        /* Footer */
+
+  /* Text */
+  --text-primary: #FFFFFF;     /* Main white */
+  --text-secondary: #A19CB0;   /* Light gray/purple for descriptions */
+  --text-muted: #736D82;       /* Placeholders, disabled text */
+  --text-inverse: #000000;     /* Footer text */
+  --text-brand: #A855F7;       /* Purple text highlights (e.g. Powered by Partnership) */
+
+  /* Brand / Accents */
+  --color-primary: #8224E3;       /* Vibrant purple (Buttons) */
+  --color-primary-hover: #6B1BC2; 
+  --color-accent-blue: #3B82F6;   /* Gradient stops, blue glow */
+  --color-accent-cyan: #06B6D4;   /* Hologram cyan */
+  --color-accent-pink: #D946EF;   /* Gradient start */
+  
+  /* Status / Icon Colors */
+  --color-success: #10B981;       /* Green checkmark */
+  --color-icon-red: #EF4444;      /* Card 1 icon */
+  --color-icon-green: #10B981;    /* Card 2 icon */
+  --color-icon-blue: #3B82F6;     /* Card 3 icon */
+  --color-icon-orange: #F97316;   /* Card 4 icon */
+
+  /* =========================================
+     Gradients
+     ========================================= */
+  --gradient-text-hero: linear-gradient(90deg, var(--color-accent-pink), var(--color-primary), var(--color-accent-blue));
+  --gradient-text-section: linear-gradient(90deg, #C084FC, #3B82F6);
+  --gradient-glow-purple: radial-gradient(circle at top left, rgba(130, 36, 227, 0.15) 0%, transparent 60%);
+  --gradient-glow-cyan: radial-gradient(circle at center, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+
+  /* =========================================
+     Spacing
+     ========================================= */
+  --space-1: 0.25rem;    /* 4px */
+  --space-2: 0.5rem;     /* 8px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-5: 1.25rem;    /* 20px */
+  --space-6: 1.5rem;     /* 24px */
+  --space-8: 2rem;       /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+  --space-32: 8rem;      /* 128px */
+
+  /* =========================================
+     Radius
+     ========================================= */
+  --radius-sm: 4px;      /* Checkboxes, small badges */
+  --radius-md: 8px;      /* Buttons, inputs */
+  --radius-lg: 16px;     /* Cards */
+  --radius-xl: 24px;     /* Form container */
+  --radius-full: 9999px; /* Pills */
+
+  /* =========================================
+     Borders
+     ========================================= */
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.06);
+  --border-default: 1px solid rgba(255, 255, 255, 0.12);
+  --border-input: 1px solid rgba(255, 255, 255, 0.15);
+  --border-focus: 1px solid var(--color-primary);
+  --border-footer: 1px solid #E5E7EB;
+
+  /* =========================================
+     Shadows / Effects
+     ========================================= */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  --glow-primary: 0 0 24px rgba(130, 36, 227, 0.3);
+  --glow-tab-active: 0 2px 8px rgba(130, 36, 227, 0.5);
+
+  /* =========================================
+     Layout
+     ========================================= */
+  --container-max: 1200px;
+  --form-max: 768px;
+  --header-height: 80px;
+
+  /* =========================================
+     Components
+     ========================================= */
+  /* Buttons */
+  --btn-height-sm: 32px;
+  --btn-height-md: 44px;
+  --btn-height-lg: 52px;
+  --btn-px-sm: var(--space-4);
+  --btn-px-md: var(--space-6);
+  --btn-px-lg: var(--space-8);
+  
+  /* Inputs */
+  --input-height: 48px;
+  --input-px: var(--space-4);
+  
+  /* Cards */
+  --card-padding: var(--space-6);
+  --card-icon-size: 40px;
+}
