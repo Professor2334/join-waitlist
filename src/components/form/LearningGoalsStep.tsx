@@ -36,11 +36,11 @@ export default function LearningGoalsStep({ register, errors, setValue, watch }:
       
       {/* Question 1 */}
       <div className="flex flex-col gap-2">
-        <label htmlFor="learningGoals" className="text-base font-bold text-[var(--text-primary)] text-left">What do you hope to learn from this program?</label>
+        <label htmlFor="learningGoals" className="text-base font-bold text-[#6B7280] text-left">What do you hope to learn from this program?</label>
         <textarea 
           id="learningGoals"
           placeholder="Tell us what skills, knowledge, or experience you'd like to gain."
-          className={`min-h-[120px] p-[var(--input-px)] bg-[var(--bg-input)] border ${errors.learningGoals ? 'border-red-500' : 'border-[var(--border-input)]'} rounded-[var(--radius-md)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors resize-y`}
+          className={`min-h-[120px] px-[16px] pt-[17px] pb-[16px] bg-[#1A1A22] border ${errors.learningGoals ? 'border-red-500' : 'border-white/[0.1]'} rounded-[var(--radius-md)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors resize-y`}
           {...register('learningGoals')}
         />
         {errors.learningGoals && <span className="text-red-500 text-xs text-left">{errors.learningGoals.message}</span>}
@@ -48,7 +48,7 @@ export default function LearningGoalsStep({ register, errors, setValue, watch }:
 
       {/* Question 2: Multi-select */}
       <div className="flex flex-col gap-3">
-        <label className="text-base font-bold text-[var(--text-primary)] text-left">Which areas are you most interested in?</label>
+        <label className="text-base font-bold text-[#6B7280] text-left">Which areas are you most interested in?</label>
         <div className="flex flex-wrap gap-3">
           {INTEREST_OPTIONS.map((area) => {
             const isSelected = selectedAreas.includes(area);
@@ -75,11 +75,11 @@ export default function LearningGoalsStep({ register, errors, setValue, watch }:
 
       {/* Question 3 */}
       <div className="flex flex-col gap-2">
-        <label htmlFor="previousProject" className="text-base font-bold text-[var(--text-primary)] text-left">Have you worked on a project you're proud of? <span className="text-[var(--text-muted)] font-normal text-sm">(Optional)</span></label>
+        <label htmlFor="previousProject" className="text-base font-bold text-[#6B7280] text-left">Have you worked on a project you're proud of? <span className="text-[var(--text-muted)] font-normal text-sm">(Optional)</span></label>
         <textarea 
           id="previousProject"
           placeholder="Tell us briefly about a project, idea, or problem you've worked on."
-          className={`min-h-[120px] p-[var(--input-px)] bg-[var(--bg-input)] border ${errors.previousProject ? 'border-red-500' : 'border-[var(--border-input)]'} rounded-[var(--radius-md)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors resize-y`}
+          className={`min-h-[120px] px-[16px] pt-[17px] pb-[16px] bg-[#1A1A22] border ${errors.previousProject ? 'border-red-500' : 'border-white/[0.1]'} rounded-[var(--radius-md)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors resize-y`}
           {...register('previousProject')}
         />
         {errors.previousProject && <span className="text-red-500 text-xs text-left">{errors.previousProject.message}</span>}

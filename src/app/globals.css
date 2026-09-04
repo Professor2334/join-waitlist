@@ -54,4 +54,30 @@ body {
   .glow-tab-active {
     box-shadow: var(--glow-tab-active);
   }
+
+  /* Shimmer Text Effect - Native Dual Background Mask */
+  .shimmer-text {
+    background-image: 
+      linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255, 255, 255, 0.45) 50%,
+        transparent 100%
+      ),
+      var(--gradient-text-hero);
+    background-size: 30% 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat;
+    animation: shimmer-sweep 4s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @keyframes shimmer-sweep {
+    0% {
+      background-position: -50% 0, 0 0;
+    }
+    100% {
+      background-position: 150% 0, 0 0;
+    }
+  }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { UseFormRegister, FieldErrors } from 'react-hook-form';
 import { WaitlistFormData } from '@/lib/schema';
+import { ChevronDown } from 'lucide-react';
 
 interface Props {
   register: UseFormRegister<WaitlistFormData>;
@@ -18,12 +19,14 @@ export default function PersonalInfoStep({ register, errors }: Props) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Full Name */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="fullName" className="text-sm font-medium text-[var(--text-primary)] text-left">Full Name</label>
+          <label htmlFor="fullName" className="text-sm font-medium text-[#6B7280] text-left">Full Name</label>
           <input 
             id="fullName"
             type="text"
             placeholder="e.g. Amara Okafor"
-            className={`h-[var(--input-height)] px-[var(--input-px)] bg-[var(--bg-input)] border ${errors.fullName ? 'border-red-500' : 'border-[var(--border-input)]'} rounded-[var(--radius-md)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors`}
+            autoComplete="off"
+            className={`h-[54px] px-[16px] pt-[17px] pb-[16px] bg-[#1A1A22] border ${errors.fullName ? 'border-red-500' : 'border-white/[0.1]'} rounded-[var(--radius-md)] text-white text-[16px] placeholder:text-[#4B5563] placeholder:font-normal focus:outline-none focus:border-[var(--color-primary)] transition-colors`}
+            style={{ fontFamily: 'Nimbus Sans, sans-serif' }}
             {...register('fullName')}
           />
           {errors.fullName && <span className="text-red-500 text-xs text-left">{errors.fullName.message}</span>}
@@ -31,12 +34,14 @@ export default function PersonalInfoStep({ register, errors }: Props) {
 
         {/* Email Address */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="text-sm font-medium text-[var(--text-primary)] text-left">Email Address</label>
+          <label htmlFor="email" className="text-sm font-medium text-[#6B7280] text-left">Email Address</label>
           <input 
             id="email"
             type="email"
             placeholder="you@example.com"
-            className={`h-[var(--input-height)] px-[var(--input-px)] bg-[var(--bg-input)] border ${errors.email ? 'border-red-500' : 'border-[var(--border-input)]'} rounded-[var(--radius-md)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors`}
+            autoComplete="off"
+            className={`h-[54px] px-[16px] pt-[17px] pb-[16px] bg-[#1A1A22] border ${errors.email ? 'border-red-500' : 'border-white/[0.1]'} rounded-[var(--radius-md)] text-white text-[16px] placeholder:text-[#4B5563] placeholder:font-normal focus:outline-none focus:border-[var(--color-primary)] transition-colors`}
+            style={{ fontFamily: 'Nimbus Sans, sans-serif' }}
             {...register('email')}
           />
           {errors.email && <span className="text-red-500 text-xs text-left">{errors.email.message}</span>}
@@ -44,12 +49,14 @@ export default function PersonalInfoStep({ register, errors }: Props) {
 
         {/* Phone Number */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="phoneNumber" className="text-sm font-medium text-[var(--text-primary)] text-left">Phone Number</label>
+          <label htmlFor="phoneNumber" className="text-sm font-medium text-[#6B7280] text-left">Phone Number</label>
           <input 
             id="phoneNumber"
             type="tel"
             placeholder="+234 800 000 0000"
-            className={`h-[var(--input-height)] px-[var(--input-px)] bg-[var(--bg-input)] border ${errors.phoneNumber ? 'border-red-500' : 'border-[var(--border-input)]'} rounded-[var(--radius-md)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors`}
+            autoComplete="off"
+            className={`h-[54px] px-[16px] pt-[17px] pb-[16px] bg-[#1A1A22] border ${errors.phoneNumber ? 'border-red-500' : 'border-white/[0.1]'} rounded-[var(--radius-md)] text-white text-[16px] placeholder:text-[#4B5563] placeholder:font-normal focus:outline-none focus:border-[var(--color-primary)] transition-colors`}
+            style={{ fontFamily: 'Nimbus Sans, sans-serif' }}
             {...register('phoneNumber')}
           />
           {errors.phoneNumber && <span className="text-red-500 text-xs text-left">{errors.phoneNumber.message}</span>}
@@ -57,54 +64,68 @@ export default function PersonalInfoStep({ register, errors }: Props) {
 
         {/* Age Range */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="ageRange" className="text-sm font-medium text-[var(--text-primary)] text-left">Age Range</label>
-          <select 
-            id="ageRange"
-            className={`h-[var(--input-height)] px-[var(--input-px)] bg-[var(--bg-input)] border ${errors.ageRange ? 'border-red-500' : 'border-[var(--border-input)]'} rounded-[var(--radius-md)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--color-primary)] transition-colors appearance-none`}
-            {...register('ageRange')}
-          >
-            <option value="" disabled>Select range</option>
-            <option value="Under 18">Under 18</option>
-            <option value="18-24">18-24</option>
-            <option value="25-34">25-34</option>
-            <option value="35-44">35-44</option>
-            <option value="45+">45+</option>
-          </select>
+          <label htmlFor="ageRange" className="text-sm font-medium text-[#6B7280] text-left">Age Range</label>
+          <div className="relative w-full">
+            <select 
+              id="ageRange"
+              defaultValue=""
+              className={`w-full h-[54px] px-[16px] pt-[17px] pb-[16px] bg-[#1A1A22] border ${errors.ageRange ? 'border-red-500' : 'border-white/[0.1]'} rounded-[var(--radius-md)] text-white text-[16px] focus:outline-none focus:border-[var(--color-primary)] transition-colors appearance-none`}
+              style={{ fontFamily: 'Nimbus Sans, sans-serif' }}
+              {...register('ageRange')}
+            >
+              <option value="" disabled className="text-white text-[16px]">Select age</option>
+              <option value="Under 18" className="text-white bg-[#1A1A22] text-[16px]">Under 18</option>
+              <option value="18-24" className="text-white bg-[#1A1A22] text-[16px]">18-24</option>
+              <option value="25-34" className="text-white bg-[#1A1A22] text-[16px]">25-34</option>
+              <option value="35-44" className="text-white bg-[#1A1A22] text-[16px]">35-44</option>
+              <option value="45+" className="text-white bg-[#1A1A22] text-[16px]">45+</option>
+            </select>
+            <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-[#374151] pointer-events-none" size={20} />
+          </div>
           {errors.ageRange && <span className="text-red-500 text-xs text-left">{errors.ageRange.message}</span>}
         </div>
 
         {/* Gender */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="gender" className="text-sm font-medium text-[var(--text-primary)] text-left">Gender</label>
-          <select 
-            id="gender"
-            className={`h-[var(--input-height)] px-[var(--input-px)] bg-[var(--bg-input)] border ${errors.gender ? 'border-red-500' : 'border-[var(--border-input)]'} rounded-[var(--radius-md)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--color-primary)] transition-colors appearance-none`}
-            {...register('gender')}
-          >
-            <option value="" disabled>Select gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Non-binary">Non-binary</option>
-            <option value="Prefer not to say">Prefer not to say</option>
-          </select>
+          <label htmlFor="gender" className="text-sm font-medium text-[#6B7280] text-left">Gender</label>
+          <div className="relative w-full">
+            <select 
+              id="gender"
+              defaultValue=""
+              className={`w-full h-[54px] px-[16px] pt-[17px] pb-[16px] bg-[#1A1A22] border ${errors.gender ? 'border-red-500' : 'border-white/[0.1]'} rounded-[var(--radius-md)] text-white text-[16px] focus:outline-none focus:border-[var(--color-primary)] transition-colors appearance-none`}
+              style={{ fontFamily: 'Nimbus Sans, sans-serif' }}
+              {...register('gender')}
+            >
+              <option value="" disabled className="text-white text-[16px]">Select gender</option>
+              <option value="Male" className="text-white bg-[#1A1A22] text-[16px]">Male</option>
+              <option value="Female" className="text-white bg-[#1A1A22] text-[16px]">Female</option>
+              <option value="Prefer not to say" className="text-white bg-[#1A1A22] text-[16px]">Prefer not to say</option>
+            </select>
+            <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-[#374151] pointer-events-none" size={20} />
+          </div>
           {errors.gender && <span className="text-red-500 text-xs text-left">{errors.gender.message}</span>}
         </div>
 
         {/* Current Level */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="currentLevel" className="text-sm font-medium text-[var(--text-primary)] text-left">Current Level / Class</label>
-          <select 
-            id="currentLevel"
-            className={`h-[var(--input-height)] px-[var(--input-px)] bg-[var(--bg-input)] border ${errors.currentLevel ? 'border-red-500' : 'border-[var(--border-input)]'} rounded-[var(--radius-md)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--color-primary)] transition-colors appearance-none`}
-            {...register('currentLevel')}
-          >
-            <option value="" disabled>Select level</option>
-            <option value="High School">High School</option>
-            <option value="Undergraduate">Undergraduate</option>
-            <option value="Graduate">Graduate</option>
-            <option value="Professional">Professional</option>
-            <option value="Other">Other</option>
-          </select>
+          <label htmlFor="currentLevel" className="text-sm font-medium text-[#6B7280] text-left">Current Level / Class</label>
+          <div className="relative w-full">
+            <select 
+              id="currentLevel"
+              defaultValue=""
+              className={`w-full h-[54px] px-[16px] pt-[17px] pb-[16px] bg-[#1A1A22] border ${errors.currentLevel ? 'border-red-500' : 'border-white/[0.1]'} rounded-[var(--radius-md)] text-white text-[16px] focus:outline-none focus:border-[var(--color-primary)] transition-colors appearance-none`}
+              style={{ fontFamily: 'Nimbus Sans, sans-serif' }}
+              {...register('currentLevel')}
+            >
+              <option value="" disabled className="text-white text-[16px]">Select level</option>
+              <option value="High School" className="text-white bg-[#1A1A22] text-[16px]">High School</option>
+              <option value="Undergraduate" className="text-white bg-[#1A1A22] text-[16px]">Undergraduate</option>
+              <option value="Graduate" className="text-white bg-[#1A1A22] text-[16px]">Graduate</option>
+              <option value="Professional" className="text-white bg-[#1A1A22] text-[16px]">Professional</option>
+              <option value="Other" className="text-white bg-[#1A1A22] text-[16px]">Other</option>
+            </select>
+            <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-[#374151] pointer-events-none" size={20} />
+          </div>
           {errors.currentLevel && <span className="text-red-500 text-xs text-left">{errors.currentLevel.message}</span>}
         </div>
       </div>

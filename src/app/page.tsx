@@ -8,17 +8,17 @@ import ApplicationForm from "@/components/form/ApplicationForm";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen relative overflow-hidden">
+    <main className="flex flex-col min-h-screen relative overflow-x-clip">
       {/* Top Left Figma Eclipse Glow */}
       <div 
-        className="absolute rounded-full pointer-events-none -z-10 blur-[90px]"
+        className="absolute rounded-full pointer-events-none -z-10 blur-[222px]"
         style={{
-          width: '293px',
-          height: '293px',
-          top: '-55px',
-          left: '-36px',
+          width: '380px',
+          height: '380px',
+          top: '-80px',
+          left: '-80px',
           backgroundColor: '#C021FF',
-          opacity: 0.26
+          opacity: 0.24
         }}
       ></div>
 

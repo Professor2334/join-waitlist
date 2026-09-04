@@ -3,7 +3,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 export default function SuccessState() {
   return (
-    <div className="w-full bg-[var(--bg-surface)] border border-[var(--border-default)] rounded-[var(--radius-xl)] p-8 md:p-16 text-center animate-in zoom-in-95 duration-500 flex flex-col items-center justify-center min-h-[400px]">
+    <div className="w-full bg-[#121217]/80 border border-white/[0.08] rounded-[32px] p-8 md:p-16 text-center animate-in zoom-in-95 duration-500 flex flex-col items-center justify-center min-h-[400px]">
       <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mb-6">
         <CheckCircle2 size={48} className="text-[var(--color-success)]" />
       </div>
