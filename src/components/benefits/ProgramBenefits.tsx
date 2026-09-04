@@ -1,5 +1,23 @@
 import React from 'react';
-import { ArrowLeftCircle, Settings, Globe, CircleDollarSign } from 'lucide-react';
+import { Settings, Globe, CircleDollarSign } from 'lucide-react';
+
+const CustomCheckIcon = ({ size = 24, color = "currentColor", strokeWidth = 2.5, className = "" }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke={color} 
+    strokeWidth={strokeWidth} 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+    className={className}
+  >
+    <circle cx="12" cy="12" r="9" />
+    <path d="M8 12l3 3 3-3h7" />
+  </svg>
+);
 
 export default function ProgramBenefits() {
   return (
@@ -35,15 +53,18 @@ export default function ProgramBenefits() {
             </span>
           </div>
 
-          {/* Heading with linear gradient */}
+          {/* Heading with linear gradient and shimmer effect */}
           <h2
             className="font-black italic bg-clip-text text-transparent"
             style={{
               fontSize: '60px',
-              lineHeight: '68px',
+              lineHeight: '60px',
               letterSpacing: '-1.5px',
               paddingBottom: '10px',
-              backgroundImage: 'linear-gradient(to right, #FFFFFF 0%, #C084FC 50%, #22D3EE 100%)',
+              backgroundImage: 'linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.45) 50%, transparent 100%), linear-gradient(to right, #FFFFFF 0%, #C084FC 50%, #22D3EE 100%)',
+              backgroundSize: '30% 100%, 100% 100%',
+              backgroundRepeat: 'no-repeat, no-repeat',
+              animation: 'shimmer-sweep 4s linear infinite',
             }}
           >
             Why Join This Program?
@@ -65,7 +86,7 @@ export default function ProgramBenefits() {
             }}
           >
             <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#1A1A24', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px', boxShadow: '0px 0px 15px 0px rgba(236, 72, 153, 0.30)' }}>
-              <ArrowLeftCircle size={24} color="#EC4899" />
+              <CustomCheckIcon size={24} color="#EC4899" />
             </div>
             <h3 style={{ fontSize: '20px', fontWeight: 'bold', color: '#FFFFFF', lineHeight: '28px', marginBottom: '12px' }}>
               Learn Design<br />Thinking
