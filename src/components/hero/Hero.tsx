@@ -57,7 +57,7 @@ export default function Hero() {
                 bottom: '-220px',
                 left: '-40px',
                 backgroundColor: '#C021FF',
-                opacity: 0.26
+                opacity: 0.16
               }}
             ></div>
             <a 

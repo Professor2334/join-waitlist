@@ -23,13 +23,13 @@ export default function ProgramBenefits() {
   return (
     <div className="relative w-full overflow-hidden">
 
-      {/* Eclipse glow — center-right, spanning heading + cards (293x293, #C021FF at 12%, blur 222) */}
+      {/* Eclipse glow — center-right, spanning heading + cards (293x293, #C021FF at 16%, blur 222) */}
       <div
         className="absolute rounded-full pointer-events-none"
         style={{
           width: '329px',
           height: '320px',
-          backgroundColor: 'rgba(192, 33, 255, 0.12)',
+          backgroundColor: 'rgba(192, 33, 255, 0.16)',
           filter: 'blur(222px)',
           top: '50%',
           left: '55%',

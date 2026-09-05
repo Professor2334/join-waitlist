@@ -18,7 +18,7 @@ export default function Home() {
           top: '-80px',
           left: '-80px',
           backgroundColor: '#C021FF',
-          opacity: 0.24
+          opacity: 0.16
         }}
       ></div>
 
