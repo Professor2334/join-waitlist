@@ -10,7 +10,7 @@
      ========================================= */
   --font-primary: 'Poppins', sans-serif;
   
-  /* Sizes */
+  /* Sizes (UI Typography - rem) */
   --text-xs: 0.75rem;      /* 12px - Labels, metadata, pills */
   --text-sm: 0.875rem;     /* 14px - Small buttons, footer links */
   --text-base: 1rem;       /* 16px - Body, inputs */
@@ -18,9 +18,12 @@
   --text-xl: 1.25rem;      /* 20px - Subheadings */
   --text-2xl: 1.5rem;      /* 24px - Small section headings */
   --text-3xl: 2rem;        /* 32px */
-  --text-4xl: 2.5rem;      /* 40px - Section headings (Why Join) */
-  --text-6xl: 3.5rem;      /* 56px - Hero headline */
-  --text-7xl: 4rem;        /* 64px - Hero headline (Large) */
+  --text-4xl: 2.5rem;      /* 40px */
+
+  /* Responsive Display Typography (clamp) */
+  --text-display-md: clamp(2rem, 5vw, 3.375rem);     /* 32px -> 54px (Waitlist Heading) */
+  --text-display-lg: clamp(2.25rem, 6vw, 3.75rem);   /* 36px -> 60px (Why Join Program) */
+  --text-hero: clamp(2.5rem, 6vw + 1rem, 3.8125rem); /* 40px -> 61px (Hero Headline) */
 
   /* Weights */
   --font-regular: 400;

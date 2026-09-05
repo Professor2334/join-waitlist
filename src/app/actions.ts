@@ -34,6 +34,7 @@ export async function submitApplication(data: WaitlistFormData) {
             ${validated.data.careerVision}, ${validated.data.programHelp}, ${validated.data.desiredImpact}
           )
         `;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (dbError: any) {
         // Handle Duplicate Email (Unique Constraint Violation)
         if (dbError.message?.includes('unique constraint') || dbError.code === '23505' || dbError.message?.includes('duplicate key')) {

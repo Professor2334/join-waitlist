@@ -39,7 +39,7 @@ export default function LearningGoalsStep({ register, errors, setValue, watch }:
         <label htmlFor="learningGoals" className="text-base font-bold text-[#6B7280] text-left">What do you hope to learn from this program?</label>
         <textarea 
           id="learningGoals"
-          placeholder="Tell us what skills, knowledge, or experience you'd like to gain."
+          placeholder="Tell us what skills, knowledge, or experience you&apos;d like to gain."
           className={`min-h-[120px] px-[16px] pt-[17px] pb-[16px] bg-[#1A1A22] border ${errors.learningGoals ? 'border-red-500' : 'border-white/[0.1]'} rounded-[var(--radius-md)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors resize-y`}
           {...register('learningGoals')}
         />
@@ -75,7 +75,7 @@ export default function LearningGoalsStep({ register, errors, setValue, watch }:
 
       {/* Question 3 */}
       <div className="flex flex-col gap-2">
-        <label htmlFor="previousProject" className="text-base font-bold text-[#6B7280] text-left">Have you worked on a project you're proud of? <span className="text-[var(--text-muted)] font-normal text-sm">(Optional)</span></label>
+        <label htmlFor="previousProject" className="text-base font-bold text-[#6B7280] text-left">Have you worked on a project you&apos;re proud of? <span className="text-[var(--text-muted)] font-normal text-sm">(Optional)</span></label>
         <textarea 
           id="previousProject"
           placeholder="Tell us briefly about a project, idea, or problem you've worked on."

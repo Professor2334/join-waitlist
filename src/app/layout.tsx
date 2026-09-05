@@ -19,6 +19,9 @@ const abeezee = ABeeZee({
 export const metadata: Metadata = {
   title: "SMART.INC Join Waitlist",
   description: "Join a transformative Design Thinking program built for Robotics & AI pioneers ready to turn bold ideas into meaningful, lasting impact across Africa.",
+  icons: {
+    icon: "/waitlist logo.svg",
+  },
 };
 
 export default function RootLayout({

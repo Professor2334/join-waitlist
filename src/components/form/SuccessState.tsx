@@ -9,7 +9,7 @@ export default function SuccessState() {
       </div>
       <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Application Received</h2>
       <p className="text-[var(--text-secondary)] text-lg max-w-md mx-auto leading-relaxed">
-        Your application has been successfully submitted. We'll be in touch with the next steps.
+        Your application has been successfully submitted. We&apos;ll be in touch with the next steps.
       </p>
     </div>
   );

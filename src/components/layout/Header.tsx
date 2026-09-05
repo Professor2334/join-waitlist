@@ -9,7 +9,7 @@ export default function Header() {
       <div className="w-full max-w-[var(--container-max)] px-6 md:px-12 mx-auto flex items-center justify-between relative">
         
         {/* Center: Status Pill (Absolutely centered) */}
-        <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2.5 bg-[#06B6D4]/10 border border-[#06B6D4]/30 rounded-full px-4 py-2.5 backdrop-blur-sm">
+        <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-2.5 bg-[#06B6D4]/10 border border-[#06B6D4]/30 rounded-full px-4 py-2.5 backdrop-blur-sm">
           <span className="w-2 h-2 rounded-full bg-[#06B6D4]"></span>
           <span className="text-sm text-[#06B6D4] font-medium tracking-wide">Application is now open</span>
         </div>

@@ -35,9 +35,9 @@ export default function ApplicationForm() {
     resolver: zodResolver(waitlistSchema),
     mode: 'onBlur',
     defaultValues: {
-      ageRange: '' as any,
-      gender: '' as any,
-      currentLevel: '' as any,
+      ageRange: undefined as unknown as WaitlistFormData['ageRange'],
+      gender: undefined as unknown as WaitlistFormData['gender'],
+      currentLevel: undefined as unknown as WaitlistFormData['currentLevel'],
     }
   });
 
@@ -56,13 +56,15 @@ export default function ApplicationForm() {
     const isStepValid = await trigger(fieldsToValidate);
     if (isStepValid) {
       setStep((prev) => Math.min(prev + 1, 3));
-      window.scrollTo({ top: document.getElementById('waitlist-form')?.offsetTop! - 100, behavior: 'smooth' });
+      const formEl = document.getElementById('waitlist-form');
+      if (formEl) window.scrollTo({ top: formEl.offsetTop - 100, behavior: 'smooth' });
     }
   };
 
   const handleBack = () => {
     setStep((prev) => Math.max(prev - 1, 1));
-    window.scrollTo({ top: document.getElementById('waitlist-form')?.offsetTop! - 100, behavior: 'smooth' });
+    const formEl = document.getElementById('waitlist-form');
+    if (formEl) window.scrollTo({ top: formEl.offsetTop - 100, behavior: 'smooth' });
   };
 
   const onSubmit = async (data: WaitlistFormData) => {
@@ -76,7 +78,7 @@ export default function ApplicationForm() {
       } else {
         setServerError(result.error || "An unexpected error occurred.");
       }
-    } catch (error) {
+    } catch {
       setServerError("Network error. Please try again later.");
     } finally {
       setIsSubmitting(false);
